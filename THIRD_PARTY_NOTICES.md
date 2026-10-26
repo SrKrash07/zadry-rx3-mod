@@ -1,0 +1,32 @@
+<!-- SPDX-License-Identifier: MPL-2.0 -->
+# Third-party software
+
+The Mozilla Public License 2.0 applies only to original source code identified as MPL-covered in this repository. Dependencies remain under their own terms.
+
+## Python dependencies
+
+| Dependency | Declared version | License |
+|---|---:|---|
+| cryptography | `50.0.0` | Apache-2.0 OR BSD-3-Clause |
+| pycdlib | `1.14.0` | LGPL-2.1-only |
+| PyInstaller | `6.21.0` | GPL-2.0-or-later with the PyInstaller bootloader exception |
+| pywebview | `6.2.1` | BSD-3-Clause |
+| Pillow | `12.3.0` | MIT-CMU |
+| inflate64 | `1.0.4` | LGPL-2.1-or-later |
+| certifi | `2026.7.22` | MPL-2.0 |
+
+PyInstaller is a release build tool. Its exception permits applications built with it to be distributed under the application's own license, subject to the licenses of the bundled dependencies. pywebview draws the coming window with the webview the operating system already has. Pillow resizes logo artwork and draws the label artwork beside the core module. inflate64 reads the Deflate64 archives of the manufacturer's source package when the app fetches the key, and certifi supplies the certificates that download is checked against.
+
+## Separation runtime
+
+XDJ-RX3 Toolkit does not redistribute a separation runtime. On request it installs audio-separator (MIT), PyTorch (BSD-3-Clause), librosa (ISC), soundfile (BSD-3-Clause, binding the LGPL-2.1 libsndfile), and imageio-ffmpeg (BSD-2-Clause, carrying an FFmpeg build under its own terms) from the Python Package Index into a per-user environment outside the application. Those packages, their transitive dependencies, and the pre-trained model weights downloaded on first use of a model retain their own licenses and are not covered by the project's MPL-2.0 license.
+
+The separation models are third-party research artifacts published through the Ultimate Vocal Remover project. Their individual terms govern their use; none of them is redistributed here.
+
+## Material not relicensed
+
+This project does not grant rights to RX3 firmware, manufacturer executables, product names, trademarks, encryption keys, whether provided by the user or fetched on their request from the manufacturer's published sources, music, Rekordbox exports, or generated stem audio. None of that material is covered by the project's MPL-2.0 license.
+
+## Typeface used to draw the artwork
+
+The tab strips and glyph atlases are rasterised from **Inter** (SIL Open Font License 1.1, © The Inter Project Authors, https://github.com/rsms/inter). Only the pixels are distributed, not the font; the licence text is in `mod/modules/core/OFL-Inter.txt`. See ASSETS.md.
