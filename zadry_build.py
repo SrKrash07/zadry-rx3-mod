@@ -3,12 +3,12 @@
 
 Ejemplos (desde la carpeta rx3-mod, con LLVM en el PATH):
     python zadry_build.py --list
-    python zadry_build.py --out C:\\Users\\adria\\RX3-build-full                       (stems + samples + registro)
-    python zadry_build.py --out C:\\Users\\adria\\RX3-build-full --logo mi-logo.png     (además el logo en la pantalla principal)
-    python zadry_build.py --out C:\\Users\\adria\\RX3-build-full --modules stems logging samples theme-white --logo mi-logo.png --canvas full
+    python zadry_build.py --out C:\\ruta\\salida                       (stems + samples + registro)
+    python zadry_build.py --out C:\\ruta\\salida --logo mi-logo.png     (además el logo en la pantalla principal)
+    python zadry_build.py --out C:\\ruta\\salida --modules stems logging samples theme-white --logo mi-logo.png --canvas full
 
 El logo va DENTRO del autoexec.bin (la mesa lo lee de la imagen del mod), por eso solo se cambia reconstruyendo el mod.
-La clave se lee del archivo indicado (por defecto C:\\Users\\adria\\RX3-key\\aes256.key) y no se copia a ningún sitio.
+La clave se lee del archivo indicado (por defecto C:\\ruta\\aes256.key) y no se copia a ningún sitio.
 """
 
 import argparse
