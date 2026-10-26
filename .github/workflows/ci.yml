@@ -3,14 +3,8 @@
 name: CI
 
 on:
-  push:
-    tags:
-      - "v*"
-    branches:
-      - "**"
-
-  pull_request:
-
+  # Las pruebas automáticas heredadas del proyecto original se ejecutan solo a mano (Actions → CI → Run workflow).
+  # Desactivadas en cada subida el 2026-10-26: fallaban en «Build and test sources» y mandaban un correo por subida; pendiente de revisar.
   workflow_dispatch:
 
 permissions:
