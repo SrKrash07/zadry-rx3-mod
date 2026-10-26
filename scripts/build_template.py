@@ -81,7 +81,8 @@ def main() -> int:
 
     manifest = {"version": args.version, "firmware": args.firmware, "modules": base_modules, "sector": SECTOR, "canvases": {}}
     try:
-        for canvas, geometry, white in (("base", None, False), ("classic", container.CLASSIC, False), ("full", container.FULL, False), ("classic-white", container.CLASSIC, True), ("full-white", container.FULL, True), ("white", None, True)):
+        # Las variantes con tema claro (classic-white, full-white, white) se retiraron del producto el 2026-10-26 (el resultado en la mesa no era bueno). El módulo theme-white sigue en el árbol.
+        for canvas, geometry, white in (("base", None, False), ("classic", container.CLASSIC, False), ("full", container.FULL, False)):
             modules = [*base_modules, *(["logo"] if geometry else []), *(["theme-white"] if white else [])]
             supplied = None
             if geometry:
